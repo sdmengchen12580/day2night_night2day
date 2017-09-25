@@ -1,0 +1,19 @@
+1.依赖：
+compile 'com.android.support:appcompat-v7:26.+'
+2.style主题：
+Theme.AppCompat.DayNight
+3.新建目录:
+新建 drawable-night 和 values-night 的资源目录（适配不同分辨率屏幕，则需新建 drawable-night-hdip、drawable-night-xhdpi 等目录来存放不同分辨率的图片资源），
+values-night 目录下存放与夜间模式相关的 value 文件。
+4.此demo讲解仅以夜间模式和日间模式的颜色为例，在 values-night 目录下新建 color.xml 文件。
+5.如想启动时候，就为夜间模式，需在application中配置如下代码：
+
+
+
+
+
+6.遇到的问题：
+recreat：有时候会遇到白屏的情况。
+换成：
+//            startActivity(new Intent(this,MainActivity.class));
+//            overridePendingTransition(R.anim.anim_activity_alpha,R.anim.anim_activity_alpha);
